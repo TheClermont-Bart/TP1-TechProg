@@ -2,14 +2,17 @@
 
 #include <stdio.h>
 
-// Il est important de faire l'implementation de vos fonctions dans un fichier .c
-// Si vous le faites dans le fichier "header", chaque fichier qui l'include va compiler l`implementation
-// et cela causeras des definitions de symboles multiples.
 
-int monprojet_add(int a, int b){
-    return a+b;
+void add_Item(inventory* inventaire, Node* node){
+	
 }
 
-void monprojet_ditbonjour(void){
-    printf("Hello Sailor !\n");
-}
+void remove_Item(){}
+
+void sort_Item(){}
+
+void find_By_Index(){}
+
+void find_By_Name(){}
+
+void item_Quantity(){}

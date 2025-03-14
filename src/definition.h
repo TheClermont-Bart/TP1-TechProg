@@ -3,10 +3,27 @@
 // ce qui evite les erreurs de redefinition et les conflits de symboles.
 #pragma once
 
-// Vous devez definir les structures et fonctions que vous voulez exposer dans les "headers"
-// Si jamais vous avez des fonctions avec des noms commun, vous devez les prefixer pour eviter des conflits de symboles
-// Le prefix peut etre le nom de votre projet, exemple: forhonor_nom_de_fonction
-int monprojet_add(int a, int b);
+void add_Item(inventory* inventaire, Node* node);
 
-// Lorsqu'une fonction n'a pas de parametre, mettre void entre les parentheses.
-void monprojet_ditbonjour(void);
+void remove_Item();
+
+void sort_Item();
+
+void find_By_Index();
+
+void find_By_Name();
+
+void item_Quantity();
+
+typedef struct Node Node;
+
+struct Node {
+	void* data;
+	Node* prev;
+	Node* next;
+};
+
+typedef struct Inventory {
+	char name[256];
+	float value;
+}inventory;

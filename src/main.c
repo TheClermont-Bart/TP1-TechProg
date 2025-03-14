@@ -4,7 +4,34 @@
 
 
 int main(int argc, char** argv){
-    printf("Bienvenue dans mon application nommer monprojet !\n");
-    printf("20 plus 22 donne: %d\n", monprojet_add(20,22));
-    monprojet_ditbonjour();
+    printf("-------------------------------------------------------------\n");
+    printf("Bienvenue la gestion d'inventaire du MMORPG Dave's World !\n");
+    printf("-------------------------------------------------------------\n");
+    printf("Que voulez-vous faire?\n1-Ajouter un item\n2-Supprimer un item\n3-Trier les items\n4-Trouver un item par son index\n5-Trouver par nom\n6-Combien il y a-t-il d'item\n7-Quitter\n");
+    int choix;
+    printf(">");
+    scanf("%d", &choix);
+    
+    switch (choix) {
+    case 1:
+    add_Item();
+    break;
+    case 2:
+    remove_Item();
+    break;
+    case 3:
+    sort_Item();
+    break;
+    case 4:
+    find_By_Index();
+    break;
+    case 5:
+    find_By_Name();
+    break;
+    case 6:
+    item_Quantity();
+    break;
+    case 7:
+    return;
+    }
 }
